@@ -1,0 +1,4 @@
+GitRepositoriesView.GitDirectories=/root/workspace/demo-app-client/.git\:/root/workspace/.git\:
+GitRepositoriesView.GitDirectories.relative=demo-app-client/.git\:.git\:
+core_autoIgnoreDerivedResources=false
+eclipse.preferences.version=1

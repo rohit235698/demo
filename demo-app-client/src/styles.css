@@ -189,3 +189,10 @@ _:-ms-input-placeholder, :root .demo-graph {
 
   text-align: center !important;
 }
+.md-96 {
+  font-size: 96px !important;
+  text-align: center;
+}
+#demo-id {
+  margin-left: 34% !important;
+}

@@ -6,7 +6,6 @@ declare var componentHandler: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
 
        ngAfterViewChecked (){
          if (componentHandler) {
