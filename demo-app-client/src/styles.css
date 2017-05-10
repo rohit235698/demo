@@ -69,6 +69,14 @@ html, body {
   color: rgba(255, 255, 255, 0.56);
   font-weight: 500;
 }
+.demo-header{
+  display: flex !important;
+  flex-direction: row;
+   display: -webkit-flex;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    overflow: hidden !important;
+}
 .demo-layout .demo-navigation .mdl-navigation__link:hover {
   background-color: #00BCD4;
   color: #37474F;
@@ -81,6 +89,7 @@ html, body {
 
 .demo-content {
   max-width: 1080px;
+  overflow-y: hidden !important;
 }
 
 .demo-charts {
@@ -171,4 +180,12 @@ _:-ms-input-placeholder, :root .demo-graph {
   display: flex;
   box-sizing: border-box;
   align-items: center;
+}
+
+.mdl-env-row {
+  padding-left: 0px !important;
+}
+.mdl-layout-title {
+
+  text-align: center !important;
 }

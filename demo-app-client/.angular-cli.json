@@ -20,7 +20,8 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "assets/css/material.min.css"
+        "assets/css/material.min.css",
+        "assets/css/getmdl-select.min.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
