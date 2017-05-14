@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { SidebarModule } from './sidebar/sidebar.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { NavbarModule } from './navbar/navbar.module';
+import { SharedService } from './shared/shared.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { NavbarModule } from './navbar/navbar.module';
     HttpModule,
     RouterModule.forRoot([ ])
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

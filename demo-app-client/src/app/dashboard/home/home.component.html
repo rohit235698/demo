@@ -1,39 +1,36 @@
       <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
           <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-        <div class="mdl-cell mdl-cell--4-col">
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fullwidth">
-            <input class="mdl-textfield__input" type="text" id="sample1" value="select project" readonly tabIndex="-1">
-            <label for="sample1" class="mdl-textfield__label">Project</label>
-            <ul for="sample1" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                <li class="mdl-menu__item">Project 1</li>
-                <li class="mdl-menu__item">Project 2</li>
-                <li class="mdl-menu__item">Project 3</li>
-            </ul>
-        </div>
+        <div class="mdl-cell  mdl-cell--4-col dropdown">
+        
+              <button (click)= "toggle('project')" 
+              class="dropbtn" >{{projectname}}<i class="material-icons md-64">{{toogle.project ?
+               'arrow_drop_up' : 'arrow_drop_down'}}</i></button>
+              <div class="dropdown-content" 
+              [ngClass]="{'show': toogle.project}">
+                <a *ngFor="let project of projectnames" (click)="setproject(project)">{{project.project}}</a>
+              </div>
+    
+
           </div>
-           <div class="mdl-cell mdl-cell--4-col">
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fullwidth">
-            <input class="mdl-textfield__input" type="text" id="sample2" value="select server" readonly tabIndex="-1" disabled="true">
-            <label for="sample2" class="mdl-textfield__label">Server</label>
-            <ul for="sample2" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                <li class="mdl-menu__item">Server 1</li>
-                <li class="mdl-menu__item">Server 2</li>
-                <li class="mdl-menu__item">Server 3</li>
-            </ul>
+          <div class="mdl-cell mdl-cell--4-col dropdown">
+               <button (click)= "toggle('env')" 
+              class="dropbtn" [disabled]="!envnames.length">{{envname}}<i class="material-icons md-64">{{toogle.env ?
+               'arrow_drop_up' : 'arrow_drop_down'}}</i></button>
+              <div  class="dropdown-content" 
+              [ngClass]="{'show': toogle.env}">
+                <a *ngFor="let env of envnames" (click)="setenv(env)">{{env.enviornment}}</a>
+              </div>
           </div>
-          </div>
-          <div class="mdl-cell mdl-cell--4-col">
-              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fullwidth">
-            <input class="mdl-textfield__input" type="text" id="sample3" value="select enviornment" readonly tabIndex="-1" disabled="true">
-            <label for="sample3" class="mdl-textfield__label">Enviornment</label>
-            <ul for="sample3" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                <li class="mdl-menu__item">DEV</li>
-                <li class="mdl-menu__item">UAT</li>
-                <li class="mdl-menu__item">SIT</li>
-                <li class="mdl-menu__item">PROD</li>
-            </ul>
-          </div>
+           <div class="mdl-cell mdl-cell--4-col dropdown">
+             <button (click)= "toggle('server')" 
+              class="dropbtn" [disabled]="!servernames.length">{{servername}}<i class="material-icons md-64">{{toogle.server ?
+               'arrow_drop_up' : 'arrow_drop_down'}}</i></button>
+              <div  class="dropdown-content" 
+              [ngClass]="{'show': toogle.server}">
+                <a *ngFor="let server of servernames" (click)="setserver(server)">{{server.server}}
+                </a>
+              </div>
           </div>
           </div>
         <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
